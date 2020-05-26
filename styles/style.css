@@ -16,14 +16,6 @@ h1 {
     margin: 0px 10px;
 }
 
-#content{
-    padding: 10px;
-    border: outset 4px; 
-    width: 60%;
-    min-height: 650px;
-    float: left;
-}
-
 #content p {
     margin: 0 5px;
 }
@@ -38,19 +30,6 @@ img {
     float: left;
 }
 
-#menu {
-padding: 5px;
-width: 20%;
-min-height: 650px;
-margin-left: 60%;
-}
-
-#menu::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 #menu li {
     margin: 20px 0;
 }
@@ -59,9 +38,29 @@ h2 {
     margin-top: 5px;
 }
 
-#footer {
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
     width: 80%;
-    height: auto;
+    min-height: 650px;
+}
+
+.flex #content {
+    background-color: rgb(236, 233, 233);
+    padding: 10px;
+    border: outset 4px; 
+    width: 75%;
+    
+}
+
+.flex #menu {
+    padding: 5px;
+}
+
+#footer {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
 }
 
 #footer h3 {
@@ -74,6 +73,17 @@ h2 {
     display: inline-block;
     padding: 0px 10px;
     margin: 10px 0px;
+}
+
+@media (max-width: 400px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+    img {
+        width: 180px;
+        height: 200px;
+        float: none;
+    }
 }
 
 
